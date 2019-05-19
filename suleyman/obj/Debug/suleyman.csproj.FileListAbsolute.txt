@@ -1,0 +1,46 @@
+C:\Users\suleyman\Documents\Visual Studio 2015\Projects\suleyman\suleyman\bin\Debug\suleyman.exe.config
+C:\Users\suleyman\Documents\Visual Studio 2015\Projects\suleyman\suleyman\bin\Debug\suleyman.exe
+C:\Users\suleyman\Documents\Visual Studio 2015\Projects\suleyman\suleyman\bin\Debug\suleyman.pdb
+C:\Users\suleyman\Documents\Visual Studio 2015\Projects\suleyman\suleyman\obj\Debug\suleyman.csprojResolveAssemblyReference.cache
+C:\Users\suleyman\Documents\Visual Studio 2015\Projects\suleyman\suleyman\obj\Debug\suleyman.Properties.Resources.resources
+C:\Users\suleyman\Documents\Visual Studio 2015\Projects\suleyman\suleyman\obj\Debug\suleyman.csproj.GenerateResource.Cache
+C:\Users\suleyman\Documents\Visual Studio 2015\Projects\suleyman\suleyman\obj\Debug\suleyman.exe
+C:\Users\suleyman\Documents\Visual Studio 2015\Projects\suleyman\suleyman\obj\Debug\suleyman.pdb
+C:\Users\suleyman\Documents\Visual Studio 2015\Projects\suleyman\suleyman\obj\Debug\suleyman.Main.resources
+C:\Users\suleyman\Documents\Visual Studio 2015\Projects\suleyman\suleyman\bin\Debug\EntityFramework.dll
+C:\Users\suleyman\Documents\Visual Studio 2015\Projects\suleyman\suleyman\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\suleyman\Documents\Visual Studio 2015\Projects\suleyman\suleyman\bin\Debug\EntityFramework.xml
+C:\Users\suleyman\Documents\Visual Studio 2015\Projects\suleyman\suleyman\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\suleyman\Documents\Visual Studio 2015\Projects\suleyman\suleyman\obj\Debug\suleyman.Admin_Page_frm.resources
+C:\Users\suleyman\Documents\Visual Studio 2015\Projects\suleyman\suleyman\obj\Debug\suleyman.User_Page_frm.resources
+C:\Users\suleyman\Documents\Visual Studio 2015\Projects\suleyman\suleyman\obj\Debug\suleyman.Add_department_frm.resources
+C:\Users\suleyman\Documents\Visual Studio 2015\Projects\suleyman\suleyman\obj\Debug\suleyman.Add_User_frm.resources
+C:\Users\suleyman\Documents\Visual Studio 2015\Projects\suleyman\suleyman\obj\Debug\suleyman.Update_User_frm.resources
+C:\Users\suleyman\Documents\Visual Studio 2015\Projects\suleyman\suleyman\obj\Debug\suleyman.Add_FingerPrint_frm.resources
+C:\Users\suleyman\Documents\Visual Studio 2015\Projects\suleyman\suleyman\bin\Debug\Newtonsoft.Json.dll
+C:\Users\suleyman\Documents\Visual Studio 2015\Projects\suleyman\suleyman\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\suleyman\Documents\Visual Studio 2015\Projects\suleyman\suleyman\bin\Debug\Newtonsoft.Json.xml
+C:\Users\suleyman\Documents\Visual Studio 2015\Projects\suleyman\suleyman\obj\Debug\suleyman.Update_Department_frm.resources
+D:\DOSYALARIM\projects\suleyman\suleyman\bin\Debug\suleyman.exe.config
+D:\DOSYALARIM\projects\suleyman\suleyman\bin\Debug\suleyman.exe
+D:\DOSYALARIM\projects\suleyman\suleyman\bin\Debug\suleyman.pdb
+D:\DOSYALARIM\projects\suleyman\suleyman\bin\Debug\EntityFramework.dll
+D:\DOSYALARIM\projects\suleyman\suleyman\bin\Debug\EntityFramework.SqlServer.dll
+D:\DOSYALARIM\projects\suleyman\suleyman\bin\Debug\Newtonsoft.Json.dll
+D:\DOSYALARIM\projects\suleyman\suleyman\bin\Debug\EntityFramework.xml
+D:\DOSYALARIM\projects\suleyman\suleyman\bin\Debug\EntityFramework.SqlServer.xml
+D:\DOSYALARIM\projects\suleyman\suleyman\obj\Debug\suleyman.csprojResolveAssemblyReference.cache
+D:\DOSYALARIM\projects\suleyman\suleyman\obj\Debug\suleyman.Add_FingerPrint_frm.resources
+D:\DOSYALARIM\projects\suleyman\suleyman\obj\Debug\suleyman.Admin_Page_frm.resources
+D:\DOSYALARIM\projects\suleyman\suleyman\obj\Debug\suleyman.Update_Department_frm.resources
+D:\DOSYALARIM\projects\suleyman\suleyman\obj\Debug\suleyman.Update_User_frm.resources
+D:\DOSYALARIM\projects\suleyman\suleyman\obj\Debug\suleyman.User_Page_frm.resources
+D:\DOSYALARIM\projects\suleyman\suleyman\obj\Debug\suleyman.Add_Department_frm.resources
+D:\DOSYALARIM\projects\suleyman\suleyman\obj\Debug\suleyman.Add_User_frm.resources
+D:\DOSYALARIM\projects\suleyman\suleyman\obj\Debug\suleyman.Main.resources
+D:\DOSYALARIM\projects\suleyman\suleyman\obj\Debug\suleyman.Properties.Resources.resources
+D:\DOSYALARIM\projects\suleyman\suleyman\obj\Debug\suleyman.csproj.GenerateResource.cache
+D:\DOSYALARIM\projects\suleyman\suleyman\obj\Debug\suleyman.csproj.CoreCompileInputs.cache
+D:\DOSYALARIM\projects\suleyman\suleyman\obj\Debug\suleyman.csproj.CopyComplete
+D:\DOSYALARIM\projects\suleyman\suleyman\obj\Debug\suleyman.exe
+D:\DOSYALARIM\projects\suleyman\suleyman\obj\Debug\suleyman.pdb

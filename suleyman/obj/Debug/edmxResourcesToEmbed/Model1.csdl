@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="database1Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Authority">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Authority1" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="User1" Relationship="Self.FK_User1_Authority" FromRole="Authority" ToRole="User1" />
+  </EntityType>
+  <EntityType Name="Department">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="User1" Relationship="Self.FK_User_Department" FromRole="Department" ToRole="User1" />
+    <Property Name="Department1" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="FingerPrint">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Data" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="User1_UserName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="User1" Relationship="database1Model.FK_FingerPrint_User1" FromRole="FingerPrint" ToRole="User1" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="User1">
+    <Key>
+      <PropertyRef Name="UserName" />
+    </Key>
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Surname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Gender" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DateOfBirth" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Department_Id" Type="Int32" Nullable="false" />
+    <Property Name="Authority_Id" Type="Int32" Nullable="false" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Authority" Relationship="Self.FK_User1_Authority" FromRole="User1" ToRole="Authority" />
+    <NavigationProperty Name="Department" Relationship="Self.FK_User_Department" FromRole="User1" ToRole="Department" />
+    <NavigationProperty Name="FingerPrints" Relationship="database1Model.FK_FingerPrint_User1" FromRole="User1" ToRole="FingerPrint" />
+    <Property Name="Country_Id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Country1" Relationship="database1Model.FK_User1_Country" FromRole="User1" ToRole="Country" />
+  </EntityType>
+  <Association Name="FK_User1_Authority">
+    <End Role="Authority" Type="Self.Authority" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="User1" Type="Self.User1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Authority">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="User1">
+        <PropertyRef Name="Authority_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_User_Department">
+    <End Role="Department" Type="Self.Department" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="User1" Type="Self.User1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Department">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="User1">
+        <PropertyRef Name="Department_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="database1Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Authorities" EntityType="Self.Authority" />
+    <EntitySet Name="Departments" EntityType="Self.Department" />
+    <EntitySet Name="FingerPrints" EntityType="Self.FingerPrint" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="User1" EntityType="Self.User1" />
+    <AssociationSet Name="FK_User1_Authority" Association="Self.FK_User1_Authority">
+      <End Role="Authority" EntitySet="Authorities" />
+      <End Role="User1" EntitySet="User1" />
+    </AssociationSet>
+    <AssociationSet Name="FK_User_Department" Association="Self.FK_User_Department">
+      <End Role="Department" EntitySet="Departments" />
+      <End Role="User1" EntitySet="User1" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FingerPrint_User1" Association="database1Model.FK_FingerPrint_User1">
+      <End Role="User1" EntitySet="User1" />
+      <End Role="FingerPrint" EntitySet="FingerPrints" />
+    </AssociationSet>
+    <EntitySet Name="Countries" EntityType="database1Model.Country" />
+    <AssociationSet Name="FK_User1_Country" Association="database1Model.FK_User1_Country">
+      <End Role="Country" EntitySet="Countries" />
+      <End Role="User1" EntitySet="User1" />
+    </AssociationSet>
+  </EntityContainer>
+  <Association Name="FK_FingerPrint_User1">
+    <End Type="database1Model.User1" Role="User1" Multiplicity="1" />
+    <End Type="database1Model.FingerPrint" Role="FingerPrint" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User1">
+        <PropertyRef Name="UserName" />
+      </Principal>
+      <Dependent Role="FingerPrint">
+        <PropertyRef Name="User1_UserName" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Country">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CountryName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="User1" Relationship="database1Model.FK_User1_Country" FromRole="Country" ToRole="User1" />
+  </EntityType>
+  <Association Name="FK_User1_Country">
+    <End Type="database1Model.Country" Role="Country" Multiplicity="1" />
+    <End Type="database1Model.User1" Role="User1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="User1">
+        <PropertyRef Name="Country_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

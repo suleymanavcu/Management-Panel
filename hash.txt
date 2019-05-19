@@ -1,0 +1,19 @@
+ public static string Hash(string password)
+        {
+            byte[] encodedPassword = new UTF8Encoding().GetBytes(password);
+
+            byte[] hash = ((HashAlgorithm)CryptoConfig.CreateFromName("MD5")).ComputeHash(encodedPassword);
+
+            string encoded = BitConverter.ToString(hash)               
+               .Replace("-", string.Empty)
+               .ToLower();
+
+            return encoded;
+        }
+
+
+
+
+
+
+c4ca4238a0b923820dcc509a6f75849b = 1
